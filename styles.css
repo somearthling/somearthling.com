@@ -109,3 +109,8 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: #ddd;
 }
+
+/* Ensure icons within links inherit the footer color */
+footer .social-icons a i {
+    color: inherit;
+}
