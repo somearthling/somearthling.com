@@ -7,6 +7,7 @@ html, body {
     flex-direction: column;
 }
 
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -97,4 +98,16 @@ img.profile {
         top: 1rem;
         right: 1rem;
     }
+}
+
+/* Footer styles */
+footer .social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #ddd;
 }
