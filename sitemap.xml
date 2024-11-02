@@ -7,9 +7,9 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
-    <!-- Publications Page -->
+    <!-- Projects Page -->
     <url>
-        <loc>https://www.somearthling.com/publications.html</loc>
+        <loc>https://www.somearthling.com/projects.html</loc>
         <lastmod>2024-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
