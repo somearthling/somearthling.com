@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth Kashyap - Researcher at IISc</title>
+    <meta name="description" content="Samarth Kashyap, a researcher at the Indian 
+    Institute of Science, Bangalore, specializing in quantum computing and quantum 
+    information.">
+    <meta name="keywords" content="Samarth Kashyap, IISc, quantum computing, 
+    quantum information, VQEs, hydrogen bond dissociation, quantum machine learning, 
+    noisy qubit simulator, spin ice systems, quantum resources, contextuality">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Samarth Kashyap">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Samarth Kashyap - Researcher at IISc">
+    <meta property="og:description" content="Samarth Kashyap, a researcher at the Indian 
+    Institute of Science, Bangalore, specializing in quantum computing and quantum 
+    information.">
+    <meta property="og:image" content="https://www.somearthling.com/profile.jpg">
+    <meta property="og:url" content="https://www.somearthling.com/projects.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Samarth Kashyap - Researcher at IISc">
+    <meta name="twitter:description" content="Samarth Kashyap, a researcher at the Indian 
+    Institute of Science, Bangalore, specializing in quantum computing and quantum 
+    information.">
+    <meta name="twitter:image" content="https://www.somearthling.com/profile.jpg">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.somearthling.com/projects.html">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Samarth Kashyap",
+      "jobTitle": "Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Indian Institute of Science, Bangalore"
+      },
+      "url": "https://www.somearthling.com/projects.html",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=pjCEdigAAAAJ&hl=en",
+        "https://www.linkedin.com/in/samarth-kashyap-072155218/",
+        "https://github.com/somearthling"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('nav ul').classList.toggle('active');
+                });
+            });
+    </script>
+
+    <section>
+        <h1>Samarth's Projects</h1>
+        <i class="fab fa-google-scholar"></i>
+        <a href="https://scholar.google.com/citations?user=pjCEdigAAAAJ&hl=en">Google Scholar</a><br><br>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/somearthling">GitHub</a>
+        <ul>
+            <li>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10191561">
+                    Quantum Convolutional Neural Network Architecture for multi-class image classification<br>
+                </a>
+                <i>IEEE International Joint Conference on Neural Networks (IJCNN), 2023</i><br>
+                <b>Samarth Kashyap, Shayan Srinivasa Garani</b><br>
+                <p>
+                    There have been many attempts at translating classical machine learning algorithms to quantum 
+                    circuits. Our architecture utilizes generalized 3-qubit parametrized unitary gates to 
+                    perform image classification. However, simply copying the architecture to use quantum 
+                    circuits does not result in similar transformations, so we introduce an encoding scheme 
+                    that allows us to preserve the quasilocal transformations of a convolutional neural 
+                    network. The results are promising, with 80% accuracy on the 10-class MNIST dataset, 
+                    with further improvements from decreasing the number of classes, leading up to a 99% 
+                    accuracy on a 2-class dataset. However, it is important to keep in mind that image 
+                    classification is not necessarily a task that benefits from a quantum algorithm due 
+                    to encoding constraints. MNIST classification is simply a benchmark to show the feasibility 
+                    of our architecture and compare it to existing algorithms, quantum and classical. There is 
+                    further ongoing research to apply this architecture to problems that are more suited to 
+                    quantum computing. 
+                </p>
+                <p>Find the code for this project 
+                    <a href="https://github.com/somearthling/QuantumCNN">here</a>.</p>
+            </li>
+            <!-- Add more projects here -->
+        </ul>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
