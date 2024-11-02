@@ -3,35 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samarth Kashyap</title>
+    <title>Samarth Kashyap - Researcher at IISc</title>
+    <meta name="description" content="Samarth Kashyap, a researcher at the Indian 
+    Institute of Science, Bangalore, specializing in quantum computing and quantum
+     information.">
+    <meta name="keywords" content="Samarth Kashyap, IISc, quantum computing, 
+    quantum information, VQEs, hydrogen bond dissociation, quantum machine learning,
+    noisy qubit simulator, spin ice systems, quantum resources, contextuality">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Samarth Kashyap">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Samarth Kashyap - Researcher at IISc">
+    <meta property="og:description" content="Samarth Kashyap, a researcher at the Indian Institute of Science, Bangalore, specializing in quantum computing and quantum information.">
+    <meta property="og:image" content="http://www.somearthling.com/profile.jpg">
+    <meta property="og:url" content="http://www.somearthling.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Samarth Kashyap - Researcher at IISc">
+    <meta name="twitter:description" content="Samarth Kashyap, a researcher at the Indian Institute of Science, Bangalore, specializing in quantum computing and quantum information.">
+    <meta name="twitter:image" content="http://www.somearthling.com/profile.jpg">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="http://www.somearthling.com">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Samarth Kashyap",
+      "jobTitle": "Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Indian Institute of Science, Bangalore"
+      },
+      "url": "http://www.somearthling.com",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=pjCEdigAAAAJ&hl=en",
+        "https://www.linkedin.com/in/samarth-kashyap-072155218/",
+        "https://github.com/somearthling"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Samarth Kashyap</h1>
-        <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="life.html">Life</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include header -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Removed setting 'page-title'
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('nav ul').classList.toggle('active');
+                });
+            });
+    </script>
+
     <section id="about">
         <figure class="profile-figure">
-            <img src="profile.jpg" alt="Samarth Kashyap" class="profile">
+            <img src="profile.jpg" alt="Profile photo of Samarth Kashyap" class="profile">
             <figcaption><a href="cv.pdf" download>Download My CV</a></figcaption>
         </figure>
-        <h2>About Me</h2>
+        <h1>About Samarth Kashyap</h1>
         <p>
             I am a researcher at the Indian Institute of Science, Bangalore.
             I'm affiliated with the Center for High Energy Physics at IISc, where I 
-            work with Prof. Apoorva Patel, focusing on applying VQEs to estimate 
-            hydrogen bond dissociation energies in small molecules.
+            work with Prof. Apoorva Patel, focusing on applying variational quantum
+            eigensolvers(VQEs)
+             to estimate hydrogen bond dissociation energies in small molecules.
         </p>
         <p>
             My research interests include quantum information and quantum computing,
@@ -39,30 +93,32 @@
             as well as the study of quantum resources such as contextuality.
         </p>
         <p>
-            I've previously worked on quantum machine learning for image classification,
-            the code for which is available on my <a href="github.com/somearthling">GitHub</a>.
-            My current work also involves developing noisy quantum simulators 
-            that will ease the knowledge gap that arises from the lack of access to
-            quantum computing hardware in the global south.
+            My current work involves developing VQE techniques to model hydrogen
+            bonded systems such as water and ammonia dimers, with the aim of
+            applying these techniques to study spin ice systems with frustrated
+            ground states. Additionally, I am working with Prof. Patel and others to
+            develop a parallelized noisy qubit simulator that can ease access to 
+            quantum computing for researchers in the field.
+        </p>
+        <p>
+            I've previously worked on quantum machine learning for image classification
+            during my undergrad and master's studies at IISc, with Prof. Shayan
+            Srinivasa Garani. 
         </p>
         <p>
             This website is a work in progress, so it might be a bit empty right now.
         </p>
     </section>
-    <footer>
-        <p>&copy; 2023 Samarth Kashyap</p>
-        <div class="social-icons">
-            <a href="https://scholar.google.com/citations?user=pjCEdigAAAAJ&hl=en" target="_blank"><i class="fab fa-google-scholar"></i></a>
-            <a href="mailto:samarthk@iisc.ac.in"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/somearthling" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </footer>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
     <script>
-        // JavaScript to toggle the menu
-        document.querySelector('.menu-icon').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
     </script>
+
 </body>
 </html>

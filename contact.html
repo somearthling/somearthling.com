@@ -4,45 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Samarth</title>
+    <meta name="description" content="Get in touch with Samarth Kashyap, a researcher at the Indian Institute of Science, Bangalore, specializing in quantum computing and quantum information.">
+    <meta name="keywords" content="Samarth Kashyap, IISc, contact, quantum computing, quantum information">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Samarth Kashyap">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Samarth">
+    <meta property="og:description" content="Get in touch with Samarth Kashyap, a researcher at the Indian Institute of Science, Bangalore, specializing in quantum computing and quantum information.">
+    <meta property="og:image" content="http://www.somearthling.com/profile.jpg">
+    <meta property="og:url" content="http://www.somearthling.com/contact.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Samarth">
+    <meta name="twitter:description" content="Get in touch with Samarth Kashyap, a researcher at the Indian Institute of Science, Bangalore, specializing in quantum computing and quantum information.">
+    <meta name="twitter:image" content="http://www.somearthling.com/profile.jpg">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="http://www.somearthling.com/contact.html">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Samarth Kashyap",
+          "jobTitle": "Researcher",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Indian Institute of Science, Bangalore"
+          },
+          "url": "http://www.somearthling.com",
+          "sameAs": [
+            "https://scholar.google.com/citations?user=pjCEdigAAAAJ&hl=en",
+            "https://www.linkedin.com/in/samarth-kashyap-072155218/",
+            "https://github.com/somearthling"
+          ]
+        }
+    </script>    
 </head>
 <body>
-    <header>
-        <h1>Contact Samarth</h1>
-        <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="life.html">Life</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include header -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('nav ul').classList.toggle('active');
+                });
+            });
+    </script>
+
     <section id="contact">
+        <h1>Contact Samarth</h1>
         <h2>Contact</h2>
         <p><i class="fas fa-envelope"></i> <a href="mailto:samarthk@iisc.ac.in">samarthk@iisc.ac.in</a></p>
         <p><i class="fas fa-phone"></i> +91-9110233586</p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank">Samarth Kashyap</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank">LinkedIn</a></p>
         <p><i class="fab fa-github"></i> <a href="github.com/somearthling" target="_blank">GitHub</a></p>
         <p><i class="fab fa-twitter"></i> <a href="https://twitter.com/somearthling_" target="_blank">Twitter</a></p>
     </section>
-    <footer>
-        <p>&copy; 2023 Samarth Kashyap</p>
-        <div class="social-icons">
-            <a href="https://scholar.google.com/citations?user=pjCEdigAAAAJ&hl=en" target="_blank"><i class="fab fa-google-scholar"></i></a>
-            <a href="mailto:samarthk@iisc.ac.in"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/somearthling" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </footer>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
     <script>
-        // JavaScript to toggle the menu
-        document.querySelector('.menu-icon').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
     </script>
 </body>
 </html>
