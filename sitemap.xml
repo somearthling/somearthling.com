@@ -3,35 +3,35 @@
     <!-- Home Page -->
     <url>
         <loc>https://www.somearthling.com/index.html</loc>
-        <lastmod>2024-11-01</lastmod>
+        <lastmod>2024-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <!-- Publications Page -->
     <url>
         <loc>https://www.somearthling.com/publications.html</loc>
-        <lastmod>2024-11-01</lastmod>
+        <lastmod>2024-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Blog Page -->
     <url>
         <loc>https://www.somearthling.com/blog.html</loc>
-        <lastmod>2024-11-01</lastmod>
+        <lastmod>2024-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Contact Page -->
     <url>
         <loc>https://www.somearthling.com/contact.html</loc>
-        <lastmod>2024-11-01</lastmod>
+        <lastmod>2024-11-02</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Life Page -->
     <url>
         <loc>https://www.somearthling.com/life.html</loc>
-        <lastmod>2024-11-01</lastmod>
+        <lastmod>2024-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
