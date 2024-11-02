@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Samarth Kashyap</title>
+    <meta name="description" content="The page you are looking for does not exist.">
+    <meta name="keywords" content="404, Page Not Found, Samarth Kashyap, IISc">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Samarth Kashyap">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Page Not Found - Samarth Kashyap">
+    <meta property="og:description" content="The page you are looking for does not exist.">
+    <meta property="og:image" content="https://www.somearthling.com/profile.jpg">
+    <meta property="og:url" content="https://www.somearthling.com/404.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page Not Found - Samarth Kashyap">
+    <meta name="twitter:description" content="The page you are looking for does not exist.">
+    <meta name="twitter:image" content="https://www.somearthling.com/profile.jpg">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.somearthling.com/404.html">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "404 Page Not Found",
+      "description": "The page you are looking for does not exist.",
+      "url": "https://www.somearthling.com/404.html"
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('nav ul').classList.toggle('active');
+                });
+            });
+    </script>
+
+    <section id="error">
+        <h1>404 - Page Not Found</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <a href="index.html" class="btn">Return to Homepage</a>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
