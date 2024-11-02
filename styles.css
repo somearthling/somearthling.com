@@ -149,3 +149,15 @@ h2 {
 h3 {
     font-size: 1.17em;
 }
+
+/* Remove underline and set color for header links */
+header a {
+    text-decoration: none;
+    color: inherit; /* Inherit the color from the parent element */
+}
+
+/* Optionally, you can set a specific color */
+header a {
+    text-decoration: none;
+    color: #fff; /* Replace with your desired color */
+}
