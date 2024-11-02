@@ -13,7 +13,7 @@
     <meta property="og:title" content="Contact Samarth">
     <meta property="og:description" content="Get in touch with Samarth Kashyap, a researcher at the Indian Institute of Science, Bangalore, specializing in quantum computing and quantum information.">
     <meta property="og:image" content="https://www.somearthling.com/profile.jpg">
-    <meta property="og:url" content="https://www.somearthling.com">
+    <meta property="og:url" content="https://www.somearthling.com/contact.html">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card Meta Tags -->
@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="https://www.somearthling.com/profile.jpg">
     
     <!-- Canonical Tag -->
-    <link rel="canonical" href="https://www.somearthling.com">
+    <link rel="canonical" href="https://www.somearthling.com/contact.html">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -77,12 +77,19 @@
                     document.querySelector('nav ul').classList.toggle('active');
                 });
             });
+
+        // JavaScript function to open mailto link in a new window
+        function openMailtoLink(event) {
+            event.preventDefault();
+            const mailtoLink = event.currentTarget.href;
+            window.open(mailtoLink, '_blank', 'noopener,noreferrer');
+        }
     </script>
 
     <section id="contact">
         <h1>Contact Samarth</h1>
         <h2>Contact</h2>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:samarthk@iisc.ac.in">samarthk@iisc.ac.in</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:samarthk@iisc.ac.in" onclick="openMailtoLink(event)">samarthk@iisc.ac.in</a></p>
         <p><i class="fas fa-phone"></i> +91-9110233586</p>
         <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank">LinkedIn</a></p>
         <p><i class="fab fa-github"></i> <a href="https://github.com/somearthling" target="_blank">GitHub</a></p>
