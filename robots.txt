@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /private/
 Allow: /
-Sitemap: http://www.somearthling.com/sitemap.xml
+Sitemap: https://www.somearthling.com/sitemap.xml
