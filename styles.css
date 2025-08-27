@@ -7,17 +7,26 @@ html, body {
     flex-direction: column;
 }
 
+/* Colors */
+:root {
+    --primary-color: #E6D5BE;
+    --sec-bg: #FAF0E1;
+    --sec-text: #222;
+    --header-footer-text: #222;
+}
+
 /* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--primary-color);
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--header-footer-text);
     padding: 1rem;
     text-align: center;
     position: relative;
@@ -42,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--header-footer-text);
     text-decoration: none;
 }
 
@@ -51,11 +60,13 @@ section {
     padding-top: 0;
     padding-bottom: 0;
     flex: 1;
+    background-color: var(--sec-bg);
+    color: var(--black);
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--header-footer-text);
     text-align: center;
     padding: 1rem;
 }
@@ -106,7 +117,7 @@ img.profile {
 
 /* Footer styles */
 footer .social-icons a {
-    color: #fff;
+    color: var(--header-footer-text);
     margin: 0 0.5rem;
     font-size: 1.5rem;
     text-decoration: none;
@@ -160,10 +171,4 @@ h3 {
 header a {
     text-decoration: none;
     color: inherit; /* Inherit the color from the parent element */
-}
-
-/* Optionally, you can set a specific color */
-header a {
-    text-decoration: none;
-    color: #fff; /* Replace with your desired color */
 }
