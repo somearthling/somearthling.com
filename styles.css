@@ -15,9 +15,15 @@ html, body {
     --header-footer-text: #222;
 }
 
+/* Font styles */
+:root {
+    --heading-font: 'Times New Roman', Times, serif;
+    --text-font: 'Arial', sans-serif;
+}
+
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--text-font);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,6 +41,10 @@ header {
 header h1 {
     font-size: 3rem;
     margin: 0.5rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
 }
 
 nav ul {
@@ -88,7 +98,7 @@ img.profile {
     nav ul {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: var(--primary-color);
         position: absolute;
         top: 100%;
         left: 0;
@@ -97,6 +107,7 @@ img.profile {
 
     nav ul.active {
         display: flex;
+        border-bottom: 2px solid var(--header-footer-text); /* Add this line */
     }
 
     nav ul li {
