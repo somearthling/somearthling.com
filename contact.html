@@ -24,6 +24,7 @@
     
     <!-- Canonical Tag -->
     <link rel="canonical" href="https://www.somearthling.com/contact.html">
+    <meta name="theme-color" content="#1a1f1b">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -73,28 +74,84 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // Highlight active nav link after header is injected (normalize .html and case)
+                (function(){
+                    let current = (location.pathname.split('/').pop() || 'index')
+                        .replace(/\.html$/i, '')
+                        .toLowerCase();
+                    document.querySelectorAll('nav a').forEach(a => {
+                        const href = (a.getAttribute('href') || '')
+                            .replace(/^\//, '')
+                            .replace(/\.html$/i, '')
+                            .toLowerCase();
+                        if (href === current) a.classList.add('active');
+                    });
+                })();
                 document.querySelector('.menu-icon').addEventListener('click', function() {
                     document.querySelector('nav ul').classList.toggle('active');
                 });
             });
-
-        // JavaScript function to open mailto link in a new window
-        function openMailtoLink(event) {
-            event.preventDefault();
-            const mailtoLink = event.currentTarget.href;
-            window.open(mailtoLink, '_blank', 'noopener,noreferrer');
-        }
     </script>
 
+    <main>
     <section id="contact">
         <h1>Contact Samarth</h1>
-        <h2>Contact</h2>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:samkash@iu.edu" onclick="openMailtoLink(event)">samkash@iu.edu</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+17652417392">+1 (765) 241-7392</a></p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank">LinkedIn</a></p>
-        <p><i class="fab fa-github"></i> <a href="https://github.com/somearthling" target="_blank">GitHub</a></p>
-        <p><i class="fab fa-twitter"></i> <a href="https://twitter.com/somearthling_" target="_blank">Twitter</a></p>
+
+        <div class="contact-grid">
+            <div class="contact-col">
+                <h2>Send me a message</h2>
+                <form action="https://formspree.io/f/xldwqgbe" method="POST">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" autocomplete="name" required><br><br>
+
+                    <label for="contact">Email or Phone:</label><br>
+                    <input type="text" id="contact" name="contact" autocomplete="email" required><br><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                    <!-- Honeypot field to reduce spam -->
+                    <div class="sr-only" aria-hidden="true">
+                        <label for="_gotcha">Leave this field empty</label>
+                        <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-col">
+                <h2>Contact</h2>
+                <div class="contact-card">
+                    <ul class="contact-list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/samarth-kashyap-072155218/" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                <span class="sr-only">LinkedIn</span>
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/somearthling" target="_blank" rel="noopener">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <span class="sr-only">GitHub</span>
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/somearthling_" target="_blank" rel="noopener">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                <span class="sr-only">Twitter</span>
+                                Twitter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
     </section>
+    </main>
 
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
@@ -105,5 +162,6 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
+    
 </body>
 </html>

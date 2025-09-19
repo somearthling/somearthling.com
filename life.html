@@ -30,7 +30,8 @@
     <meta name="twitter:image" content="https://www.somearthling.com/profile.jpg">
     
     <!-- Canonical Tag -->
-    <link rel="canonical" href="https://www.somearthling.com">
+    <link rel="canonical" href="https://www.somearthling.com/life.html">
+    <meta name="theme-color" content="#1a1f1b">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -80,12 +81,26 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // Highlight active nav link after header is injected (normalize .html and case)
+                (function(){
+                    let current = (location.pathname.split('/').pop() || 'index')
+                        .replace(/\.html$/i, '')
+                        .toLowerCase();
+                    document.querySelectorAll('nav a').forEach(a => {
+                        const href = (a.getAttribute('href') || '')
+                            .replace(/^\//, '')
+                            .replace(/\.html$/i, '')
+                            .toLowerCase();
+                        if (href === current) a.classList.add('active');
+                    });
+                })();
                 document.querySelector('.menu-icon').addEventListener('click', function() {
                     document.querySelector('nav ul').classList.toggle('active');
                 });
             });
     </script>
 
+    <main>
     <section>
         <h1>Samarth's Life</h1>
         <p>This is a page mainly about my current interests and hobbies.
@@ -94,8 +109,8 @@
             you can click on the links below.
         </p>
         <h2><i class="fas fa-book"></i>  Books</h2>
-        <i class="fab fa-goodreads"></i>
-        <a href="https://www.goodreads.com/user/show/140363591-sam#" target="_blank">Goodreads</a>
+    <i class="fab fa-goodreads"></i>
+    <a href="https://www.goodreads.com/user/show/140363591-sam#" target="_blank" rel="noopener">Goodreads</a>
         <subsection>
             <p> This section is out of date since I had to abandon all my books in India due to airline weight restrictions :(</p>
             <h3>Currently Reading</h3>
@@ -112,18 +127,18 @@
             </ul>
         </subsection>     
         <h2><i class="fas fa-music"></i> Music</h2>
-        <i class="fab fa-spotify"></i>
-        <a href="https://open.spotify.com/user/314ftu4wj76zyobtpclkzj3q7tty?si=ba1064fcc74a4c2f" target="_blank">Spotify</a>
+    <i class="fab fa-spotify"></i>
+    <a href="https://open.spotify.com/user/314ftu4wj76zyobtpclkzj3q7tty?si=ba1064fcc74a4c2f" target="_blank" rel="noopener">Spotify</a>
         <br><br>
         <!-- Spotify Playlist Embed -->
-        <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1Eph75lhW41daB?utm_source=generator&theme=0" 
-        width="100%" height="352" frameBorder="0" allowfullscreen="" 
+    <iframe style="border-radius:0.75rem;height:22rem;" 
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1Eph75lhW41daB?utm_source=generator&theme=0" 
+    width="100%" frameBorder="0" allowfullscreen="" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy"></iframe>
         <h2><i class="fas fa-film"></i> Film</h2>
-        <i class="fab fa-letterboxd"></i>
-        <a href="https://letterboxd.com/somearthling/" target="_blank">Letterboxd</a>
+    <i class="fab fa-letterboxd"></i>
+    <a href="https://letterboxd.com/somearthling/" target="_blank" rel="noopener">Letterboxd</a>
         <subsection>
             <h3>Recommendations from recent watches:</h3>
             <ul>
@@ -134,6 +149,7 @@
         </subsection>
 
     </section>
+    </main>
 
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
@@ -145,11 +161,6 @@
             });
     </script>
 
-    <script>
-        // JavaScript to toggle the menu
-        document.querySelector('.menu-icon').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-    </script>
+    
 </body>
 </html>

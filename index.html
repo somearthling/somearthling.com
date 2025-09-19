@@ -25,7 +25,8 @@
     <meta name="twitter:image" content="https://www.somearthling.com/profile.jpg">
     
     <!-- Canonical Tag -->
-    <link rel="canonical" href="https://www.somearthling.com">
+    <link rel="canonical" href="https://www.somearthling.com/index.html">
+    <meta name="theme-color" content="#1a1f1b">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -75,6 +76,19 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // Highlight active nav link after header is injected (normalize .html and case)
+                (function(){
+                    let current = (location.pathname.split('/').pop() || 'index')
+                        .replace(/\.html$/i, '')
+                        .toLowerCase();
+                    document.querySelectorAll('nav a').forEach(a => {
+                        const href = (a.getAttribute('href') || '')
+                            .replace(/^\//, '')
+                            .replace(/\.html$/i, '')
+                            .toLowerCase();
+                        if (href === current) a.classList.add('active');
+                    });
+                })();
                 // Removed setting 'page-title'
                 document.querySelector('.menu-icon').addEventListener('click', function() {
                     document.querySelector('nav ul').classList.toggle('active');
@@ -82,10 +96,11 @@
             });
     </script>
 
+    <main>
     <section id="about">
         <h1>About Me</h1>
         <figure class="profile-figure">
-            <img src="profile.jpg" alt="Profile photo of Samarth Kashyap" class="profile">
+            <img src="profile.jpg" alt="Profile photo of Samarth Kashyap" class="profile" width="150" height="193" loading="lazy">
             <figcaption><a href="cv.pdf" download>Download My CV</a></figcaption>
         </figure>
         <p>
@@ -122,15 +137,17 @@
         </p>
     </section>
 
+    </main>
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
     <script>
         fetch('footer.html')
             .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+                        .then(data => {
+                                document.getElementById('footer-placeholder').innerHTML = data;
+                        });
     </script>
+        
 
 </body>
 </html>
