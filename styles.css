@@ -289,6 +289,45 @@ form button[type="submit"]:hover { background: var(--color-hover); }
 form .social-icons a i {color: inherit;}
 
 /* ===============================
+   Components: Thoughts list
+   =============================== */
+/* Keep ordered list numbers; add comfortable spacing and dividers */
+ol.thoughts-list {
+    margin: 0;
+    padding-left: 2rem; /* keep numbers readable while reducing default indent */
+}
+ol.thoughts-list > li {
+    border-top: var(--border-1) solid var(--color-divider);
+    padding: var(--space-24) 0;
+}
+ol.thoughts-list > li:first-child { border-top: none; }
+
+/* Layout: content on left, date on right; stack on small screens */
+.thoughts-entry {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: var(--space-24);
+    align-items: start;
+}
+.thoughts-content > :first-child { margin-top: 0; }
+.thoughts-content > :last-child { margin-bottom: 0; }
+
+.thoughts-meta {
+    color: var(--color-muted);
+    font-size: 0.875rem; /* 14px */
+    white-space: nowrap;
+    align-self: start;
+    text-align: right;
+}
+.thoughts-meta time { font-variant-numeric: tabular-nums; }
+
+/* Optional title styling if used */
+.thoughts-title {
+    margin: 0 0 var(--space-8) 0;
+    color: var(--color-text-primary);
+}
+
+/* ===============================
    Footer
    =============================== */
 footer {

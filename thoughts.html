@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samarth's Thoughts</title>
-    <meta http-equiv="refresh" content="0; url=thoughts.html">
     <meta name="description" content="Thoughts, notes, and ideas by Samarth Kashyap on quantum computing, science, and life.">
     <meta name="keywords" content="Samarth Kashyap, IU Bloomington, thoughts, notes, quantum computing, quantum information, research, VQEs, quantum machine learning, IISc">
     <meta name="robots" content="index, follow">
@@ -41,9 +40,8 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHYT1TM17N"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
-
     gtag('config', 'G-YHYT1TM17N');
     </script>
 
@@ -95,10 +93,48 @@
             });
     </script>
 
-    <script>
-      // JS fallback redirect (in case meta refresh is blocked)
-      window.location.replace('thoughts.html');
-    </script>
+    
+
+    <main>
+    <section>
+        <h1>Thoughts</h1>
+        <ol class="thoughts-list" reversed>
+            <li>
+                <article class="thoughts-entry">
+                    <div class="thoughts-content">
+                        <p>What should I blog about? I've asked myself this for a year, and my website has had a 
+                        “Blog” section that says “coming soon” for as long. Science? Politics? Philosophy? My 
+                        life? A meta piece on what I should blog about? I have a lot of opinions - maybe I should
+                        actually write about some of them. Who knows, maybe I will. Sometime.</p>
+
+                        <p>Today, I decided to ease the pressure by changing my “Blog” page to “Thoughts,” so that I 
+                        don't have to write 3 pages of gripping cinema to feel satisfied with putting it on here. 
+                        I think a meta commentary piece will do nicely as a first post, as long as I back it up 
+                        with some actual content soon after. (Dear reader, reading this on <span class="js-today-date"></span>,
+                        I hope I haven't let you down.)</p>
+
+                        <p>I might put forth arguments to try and settle complex issues, I might do a piece about 
+                        why we need nuclear power. I might do a bug fact of the day. I'm taking suggestions in 
+                        the meantime, if you think that I know enough about something to write about it.</p>
+                    </div>
+                    <div class="thoughts-meta">
+                        <time datetime="2025-10-14">October 14, 2025</time>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="thoughts-entry">
+                    <div class="thoughts-content">
+                        <p>Coming soon...</p>
+                    </div>
+                    <div class="thoughts-meta">
+                        <time datetime="2024-10-01">A long time ago</time>
+                    </div>
+                </article>
+            </li>
+        </ol>
+    </section>
+    </main>
 
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
@@ -108,6 +144,24 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+    </script>
+    
+    <script>
+        // Populate any ".js-today-date" placeholders once the DOM is ready
+        (function(){
+            function fillDates(){
+                const today = new Date();
+                const fmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                document.querySelectorAll('.js-today-date').forEach(el => {
+                    el.textContent = fmt.format(today);
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fillDates);
+            } else {
+                fillDates();
+            }
+        })();
     </script>
     
 </body>
