@@ -14,9 +14,9 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Thoughts Page -->
+    <!-- Blog Page -->
     <url>
-        <loc>https://www.somearthling.com/thoughts.html</loc>
+        <loc>https://www.somearthling.com/blog.html</loc>
         <lastmod>2024-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
