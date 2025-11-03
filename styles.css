@@ -379,14 +379,4 @@ footer .social-icons a i { color: inherit; }
         right: 1rem;
         z-index: 1200; /* stay clickable above overlay */
     }
-
-    /* Thoughts: stack date under content on small screens */
-    .thoughts-entry {
-        grid-template-columns: 1fr;
-        row-gap: var(--space-8);
-    }
-    .thoughts-meta {
-        text-align: left;
-        margin-top: var(--space-8);
-    }
 }
